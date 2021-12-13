@@ -53,7 +53,7 @@ function draw() {
 
 function keyPressed(){  
   if(nowChar==typeText.length){
-    if(key=='\n'){
+    if(key=="Enter"){
       nowChar=0;
       song.play();
     }
