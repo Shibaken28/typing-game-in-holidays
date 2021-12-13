@@ -51,14 +51,17 @@ function draw() {
   textEffect(typeText,width/2,330,600,1);
 }
 
-function keyPressed(){
-  if(key==typeText.charAt(nowChar)){
-    nowChar++;
-    song.play();
-    if(nowChar>=typeText.length){
+function keyPressed(){  
+  if(nowChar==typeText.length){
+    if(key=='\n'){
       nowChar=0;
+      song.play();
+    }
+  }else{
+    if(key==typeText.charAt(nowChar)){
+      nowChar++;
+      song.play();
     }
   }
 }
-
 
