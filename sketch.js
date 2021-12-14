@@ -43,7 +43,7 @@ function textEffect(s,x,y,w,op){
 }
 
 function draw() {
-  t+=0.3;
+  t+=0.15;
   background(220);
   textSize(130);
   textEffect(kanjiText,width/2,470,600,0);
