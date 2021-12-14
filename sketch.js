@@ -10,9 +10,9 @@ var start=0;
 var playing=0;
 var time=99999;
 
-/*function preload() {
-song = loadSound('type.mp3');
-}*/
+function preload() {
+  song = loadSound('type.mp3');
+}
 
 function setup() {
   start=millis();
