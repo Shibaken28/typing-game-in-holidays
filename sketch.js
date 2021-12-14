@@ -27,7 +27,8 @@ function textEffect(s,x,y,w,op){
     if(op==1){
       if(i<nowChar){
         fill(150);
-        text(s.charAt(i),x+dx/2-w/2+dx*i+noise(t/10,i,0.5)*15+10,y+noise(t/10,i,0)*15+10);
+        noStroke()
+        text(s.charAt(i),x+dx/2-w/2+dx*i+noise(t/10,i,0.5)*15+7,y+noise(t/10,i,0)*15+7);
         fill(30);
         stroke(10);
         strokeWeight(3);
