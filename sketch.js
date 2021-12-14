@@ -50,7 +50,7 @@ function draw() {
   textSize(80);
   textEffect(typeText,width/2,330,600,1);
   textSize(30);
-  textEffect("Number of 有給休暇:"+count,width/2,30,200,0);
+  textEffect("Number of yuukyuukyuuka:"+count,200,30,300,0);
 }
 
 function keyPressed(){  
