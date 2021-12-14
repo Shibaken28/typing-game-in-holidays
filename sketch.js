@@ -4,7 +4,7 @@ var theta=0;
 var t=0;
 var nowChar=0;
 var song;
-
+var count =0;
 
 function preload() {
   song = loadSound('type.mp3');
@@ -49,12 +49,15 @@ function draw() {
   textEffect(kanjiText,width/2,470,600,0);
   textSize(80);
   textEffect(typeText,width/2,330,600,1);
+  textSize(30);
+  textEffect("Number of 有給休暇:"+count,width/2,30,200,0);
 }
 
 function keyPressed(){  
   if(nowChar==typeText.length){
     if(key=="Enter"){
       nowChar=0;
+      count++;
       song.play();
     }
   }else{
