@@ -26,6 +26,8 @@ function textEffect(s,x,y,w,op){
   for(var i=0;i<s.length;i++){
     if(op==1){
       if(i<nowChar){
+        fill(150);
+        text(s.charAt(i),x+dx/2-w/2+dx*i+noise(t/10,i,0.5)*15+10,y+noise(t/10,i,0)*15+10);
         fill(30);
         stroke(10);
         strokeWeight(3);
@@ -38,8 +40,8 @@ function textEffect(s,x,y,w,op){
       }
     }else{
       noStroke();
-      fill(150);
-      text(s.charAt(i),x+dx/2-w/2+dx*i+noise(t/10.0,i,0.5)*15+3,y+noise(t/10.0,i,0)*15+3);
+      fill(130);
+      text(s.charAt(i),x+dx/2-w/2+dx*i+noise(t/10.0,i,0.5)*15+15,y+noise(t/10.0,i,0)*15+15);
       noStroke();
       fill(20);
       text(s.charAt(i),x+dx/2-w/2+dx*i+noise(t/10.0,i,0.5)*15,y+noise(t/10.0,i,0)*15);
@@ -91,8 +93,8 @@ function menu(){
   start=millis();
   textSize(100);
   textAlign(CENTER, CENTER);
-  textShadow("Last Score :  "+floorU(time/10000,100)+" sec/有給休暇",width/2,height/2-100,3,3);
-  textShadow("Best Score :  "+floorU(highScore/10000,100)+" sec/有給休暇",width/2,height/2+100,3,3);
+  textShadow("Last Score :  "+floorU(time/10000,100)+" sec/有給休暇",width/2,height/2-100,10,10);
+  textShadow("Best Score :  "+floorU(highScore/10000,100)+" sec/有給休暇",width/2,height/2+100,10,10);
 }
 
 
@@ -101,15 +103,15 @@ function floorU(a,b){
 }
 
 function play(){
-  textSize(300);
+  textSize(height/5);
   textAlign(CENTER, CENTER);
-  textEffect(kanjiText,width/2,height/2+110,1200,0);
-  textSize(120);
-  textEffect(typeText,width/2,height/2-100,1200,1);
-  textSize(100);
+  textEffect(kanjiText,width/2,height/7*4,width/5*4,0);
+  textSize(height/15);
+  textEffect(typeText,width/2,height/7*3,Math.max(width/5*4,800),1);
+  textSize(height/30);
   fill(100);
   textAlign(LEFT, LEFT);
-  textShadow("Number of 有給休暇:"+count,20,height/3+130,3,3);
+  textShadow("Number of 有給休暇:"+count,20,height/3+height/60+10,10,10);
 }
 
 
