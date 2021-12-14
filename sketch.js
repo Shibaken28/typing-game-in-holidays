@@ -107,7 +107,7 @@ function play(){
   textSize(120);
   textEffect(typeText,width/2,height/2-100,1200,1);
   textSize(100);
-  fill(200);
+  fill(100);
   textAlign(LEFT, LEFT);
   textShadow("Number of 有給休暇:"+count,20,height/3+130,3,3);
 }
